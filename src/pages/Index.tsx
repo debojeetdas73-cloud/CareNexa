@@ -35,11 +35,16 @@ const Index = () => {
   const searchVersion = useRef(0);
 
   useEffect(() => {
-    if (window.location.hash !== "#prescription-upload") return;
-    const timer = window.setTimeout(() => {
-      document.getElementById("prescription-upload")?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }, 80);
-    return () => window.clearTimeout(timer);
+    const scrollToHash = () => {
+      const hash = window.location.hash;
+      if (!hash) return;
+      const id = hash.replace("#", "");
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
 
   const filteredResults = useMemo(() => {
@@ -118,7 +123,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl px-4 pt-8 text-sm text-muted-foreground">Searching live pharmacy inventory…</div>
       )}
       {selectedMedicine && (
-        <div className="container mx-auto max-w-4xl px-4 pt-16 md:pt-24">
+        <div id="search" className="container mx-auto max-w-4xl px-4 pt-16 md:pt-24">
           <PharmacyFilters filters={filters} onChange={setFilters} />
         </div>
       )}
