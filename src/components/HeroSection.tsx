@@ -88,7 +88,7 @@ const HeroSection = ({ onSearch, onLocationChange }: HeroSectionProps) => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary to-[hsl(var(--hero-gradient-to))] px-4 py-20 md:py-32">
+    <section id="search" className="relative overflow-hidden bg-gradient-to-br from-primary to-[hsl(var(--hero-gradient-to))] px-4 py-20 md:py-32">
       <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-primary-foreground/5" />
       <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-primary-foreground/5" />
 

@@ -123,7 +123,7 @@ const Index = () => {
         <div className="container mx-auto max-w-4xl px-4 pt-8 text-sm text-muted-foreground">Searching live pharmacy inventory…</div>
       )}
       {selectedMedicine && (
-        <div id="search" className="container mx-auto max-w-4xl px-4 pt-16 md:pt-24">
+        <div className="container mx-auto max-w-4xl px-4 pt-16 md:pt-24">
           <PharmacyFilters filters={filters} onChange={setFilters} />
         </div>
       )}
