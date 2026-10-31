@@ -31,10 +31,10 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#search" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Find Medicine</a>
+          <a href="/#search" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Find Medicine</a>
           <Link to="/hospitals" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Find Hospitals</Link>
-          <a href="#how-it-works" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
-          <a href="#pharmacies" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Pharmacies</a>
+          <a href="/#how-it-works" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">How It Works</a>
+          <a href="/#pharmacies" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">Pharmacies</a>
           <Link to="/account">
             <Button size="sm">{signedIn === null ? "Account" : signedIn ? "My account" : "Sign In"}</Button>
           </Link>
@@ -51,10 +51,10 @@ const Navbar = () => {
       {mobileOpen && (
         <div className="border-t border-border bg-card px-4 py-4 md:hidden">
           <div className="flex flex-col gap-3">
-            <a href="#search" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">Find Medicine</a>
+            <a href="/#search" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">Find Medicine</a>
             <Link to="/hospitals" onClick={() => setMobileOpen(false)} className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">Find Hospitals</Link>
-            <a href="#how-it-works" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">How It Works</a>
-            <a href="#pharmacies" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">Pharmacies</a>
+            <a href="/#how-it-works" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">How It Works</a>
+            <a href="/#pharmacies" className="rounded-lg px-3 py-2 text-sm font-medium text-foreground hover:bg-muted">Pharmacies</a>
             <Link to="/account" onClick={() => setMobileOpen(false)}>
               <Button size="sm" className="mt-2 w-full">{signedIn === null ? "Account" : signedIn ? "My account" : "Sign In"}</Button>
             </Link>
