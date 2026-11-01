@@ -204,7 +204,7 @@ export default function HospitalLabTests({ hospitalId }: Props) {
                 </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_190px]">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,1fr)_190px]">
                 <label className="flex min-h-11 items-center gap-2 rounded-xl border border-slate-200 bg-white px-3">
                     <Search size={17} className="text-slate-400" />
                     <input

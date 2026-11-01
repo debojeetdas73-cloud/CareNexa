@@ -77,7 +77,7 @@ export default function Hospitals() {
         <p className="text-sm font-semibold uppercase tracking-[.12em] text-white/75">CareNexa healthcare directory</p>
         <h1 className="mt-3 max-w-3xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">Find the right hospital</h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-white/85">Explore hospitals, departments, specialists, health packages and services in one place.</p>
-        <div className="mt-8 grid max-w-5xl gap-3 rounded-2xl bg-white p-3 shadow-xl sm:grid-cols-[minmax(0,1fr)_190px_230px]">
+        <div className="mt-8 grid grid-cols-1 max-w-5xl gap-3 rounded-2xl bg-white p-3 shadow-xl sm:grid-cols-[minmax(0,1fr)_190px_230px]">
           <label className="flex min-h-12 items-center gap-3 rounded-xl border border-slate-200 px-4 text-slate-500"><Search size={19} /><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Search hospital, doctor or department..." className="w-full bg-transparent text-sm text-slate-900 outline-none" /></label>
           <select aria-label="Filter by city" value={city} onChange={e => setCity(e.target.value)} className="min-h-12 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-800"><option value="all">All cities</option>{cities.map(c => <option key={c} value={c}>{c}</option>)}</select>
           <select aria-label="Filter by specialization" value={specialty} onChange={e => setSpecialty(e.target.value)} className="min-h-12 rounded-xl border border-slate-200 bg-white px-3 text-sm text-slate-800"><option value="all">All specializations</option>{specializations.map(s => <option key={s} value={s}>{s}</option>)}</select>
