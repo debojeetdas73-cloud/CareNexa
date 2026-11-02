@@ -7,6 +7,7 @@ import CustomerOverview from "@/components/customer/CustomerOverview";
 import CustomerSettings from "@/components/customer/CustomerSettings";
 import { loadApprovedPharmacies, loadCustomerOrders } from "@/components/customer/customerData";
 import type { CustomerOrder, CustomerProfileUser, CustomerTab, PharmacyOption, PrescriptionOrder } from "@/components/customer/types";
+import CustomerMembership from "@/components/membership/CustomerMembership";
 
 const tabs: Array<{ id: CustomerTab; label: string; icon: typeof Activity }> = [
   { id: "overview", label: "Overview", icon: Activity },
@@ -177,6 +178,8 @@ export default function CustomerProfile() {
         </div>
 
         {error && <div role="alert" className="mb-4 rounded-xl border border-[#f1d98a] bg-[#fff4d6] p-3.5 text-sm text-[#6b4a00]">{error}{!user && <Link to="/account" className="ml-1 font-bold underline">Sign in</Link>}</div>}
+
+        <CustomerMembership />
 
         {loading ? <div className="rounded-2xl border border-[#dfe8e3] bg-white p-10 text-center text-sm text-[#5b6f66]">Loading your customer space…</div> : !error && <>
           {tab === "overview" && <CustomerOverview user={user} orders={orders} prescriptions={prescriptionOrders} busyOrder={busyOrder} onRespond={respondToQuote} onNavigate={setTab} />}

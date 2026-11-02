@@ -51,3 +51,12 @@ export function distanceInKm(from: Coordinates, to: Coordinates): number | null 
 
   return 6371 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
+
+export function isWithinDistance(
+  distanceKm: number | null | undefined,
+  radiusKm: number | null,
+): boolean {
+  if (radiusKm === null) return true;
+  return Number.isFinite(radiusKm) && radiusKm >= 0 &&
+    distanceKm != null && Number.isFinite(distanceKm) && distanceKm <= radiusKm;
+}

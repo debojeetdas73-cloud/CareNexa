@@ -52,4 +52,9 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+
+  .hospital-filter option {
+    color: #0f172a;
+    background-color: #fff;
+  }
 }

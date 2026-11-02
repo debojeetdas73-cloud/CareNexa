@@ -16,6 +16,7 @@ import PharmacyEarnings from "@/pages/pharmacy/PharmacyEarnings";
 import PharmacyOverview from "@/pages/pharmacy/PharmacyOverview";
 import PharmacyOrders from "@/pages/pharmacy/PharmacyOrders";
 import PharmacyProfile from "@/pages/pharmacy/PharmacyProfile";
+import PharmacyMembership from "@/components/membership/PharmacyMembership";
 import type { InventoryMedicine as Inv, Order, OrderItem, OrderMedicine, PharmacyRecord, PrescriptionOffer, PrescriptionOrder } from "@/components/pharmacy/types";
 import { toast } from "sonner";
 import IncomingOrderAlert from "@/components/pharmacy/IncomingOrderAlert";
@@ -1109,6 +1110,7 @@ export default function PharmacyDashboard() {
                                 {tab === "sounds" && <PharmacySounds notificationSound={notificationSound} onToggleSound={togglePrescriptionSound} onPreview={previewSound} />}
                                 {/* ======================= PROFILE ======================= */}
                                 {tab === "profile" && pharmacy && <PharmacyProfile pharmacy={pharmacy} verified={verified} />}
+                                {tab === "profile" && <PharmacyMembership />}
                             </>
                         )
                     )}

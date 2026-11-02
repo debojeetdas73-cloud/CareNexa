@@ -14,6 +14,7 @@ const HospitalPackageDetail = lazy(() => import("./pages/HospitalPackageDetail.t
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
 const CustomerProfile = lazy(() => import("./pages/customer/CustomerProfile.tsx"));
+const Membership = lazy(() => import("./pages/Membership.tsx"));
 const PharmacyDashboard = lazy(() => import("./pages/PharmacyDashboard.tsx"));
 const AdminDashboard = lazy(() => import("./pages/AdminDashboard.tsx"));
 const PharmacyOnboarding = lazy(() => import("./pages/PharmacyOnboarding.tsx"));
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/hospitals/:hospitalId/doctors/:doctorId" element={<DoctorProfile />} />
             <Route path="/hospitals/:hospitalId/packages/:packageId" element={<HospitalPackageDetail />} />
             <Route path="/account" element={<Account />} />
+<Route path="/membership" element={<Membership />} />
             <Route path="/profile" element={<CustomerProfile />} />
             <Route path="/pharmacy-onboarding" element={<PharmacyOnboarding />} />
             <Route path="/pharmacy-dashboard" element={<PharmacyDashboard />} />
